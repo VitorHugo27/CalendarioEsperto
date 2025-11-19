@@ -147,7 +147,7 @@
             labelMes.Size = new Size(40, 18);
             labelMes.TabIndex = 9;
             labelMes.Text = "0000";
-            labelMes.Click += this.labelMes_Click;
+            labelMes.Click += labelMes_Click;
             // 
             // buttonAnterior
             // 
@@ -190,7 +190,7 @@
             MaximizeBox = false;
             Name = "Dias";
             StartPosition = FormStartPosition.CenterScreen;
-            Text = "Form1";
+            Text = "Dias";
             Load += Dias_Load;
             ResumeLayout(false);
             PerformLayout();

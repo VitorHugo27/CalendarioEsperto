@@ -28,27 +28,41 @@
         /// </summary>
         private void InitializeComponent()
         {
-            panel1 = new Panel();
+            panelDias = new Panel();
+            labelFeriado = new Label();
             labelDia = new Label();
-            panel1.SuspendLayout();
+            panelDias.SuspendLayout();
             SuspendLayout();
             // 
-            // panel1
+            // panelDias
             // 
-            panel1.BackColor = Color.FromArgb(224, 224, 224);
-            panel1.Controls.Add(labelDia);
-            panel1.Dock = DockStyle.Fill;
-            panel1.Location = new Point(0, 0);
-            panel1.Margin = new Padding(1);
-            panel1.Name = "panel1";
-            panel1.Size = new Size(80, 80);
-            panel1.TabIndex = 0;
+            panelDias.BackColor = Color.FromArgb(224, 224, 224);
+            panelDias.Controls.Add(labelFeriado);
+            panelDias.Controls.Add(labelDia);
+            panelDias.Dock = DockStyle.Fill;
+            panelDias.Location = new Point(0, 0);
+            panelDias.Margin = new Padding(1);
+            panelDias.Name = "panelDias";
+            panelDias.Size = new Size(80, 80);
+            panelDias.TabIndex = 0;
+            panelDias.DoubleClick += panelDias_DoubleClick;
+            panelDias.MouseEnter += panelDias_MouseEnter;
+            panelDias.MouseLeave += panelDias_MouseLeave;
+            // 
+            // labelFeriado
+            // 
+            labelFeriado.AutoSize = true;
+            labelFeriado.Font = new Font("Microsoft Sans Serif", 8.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            labelFeriado.Location = new Point(3, 32);
+            labelFeriado.Name = "labelFeriado";
+            labelFeriado.Size = new Size(0, 13);
+            labelFeriado.TabIndex = 1;
             // 
             // labelDia
             // 
             labelDia.AutoSize = true;
             labelDia.Font = new Font("Microsoft Sans Serif", 11.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            labelDia.Location = new Point(39, 10);
+            labelDia.Location = new Point(43, 10);
             labelDia.Name = "labelDia";
             labelDia.Size = new Size(24, 18);
             labelDia.TabIndex = 0;
@@ -58,17 +72,18 @@
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            Controls.Add(panel1);
+            Controls.Add(panelDias);
             Name = "DiaUc";
             Size = new Size(80, 80);
-            panel1.ResumeLayout(false);
-            panel1.PerformLayout();
+            panelDias.ResumeLayout(false);
+            panelDias.PerformLayout();
             ResumeLayout(false);
         }
 
         #endregion
 
-        private Panel panel1;
+        private Panel panelDias;
         private Label labelDia;
+        public Label labelFeriado;
     }
 }

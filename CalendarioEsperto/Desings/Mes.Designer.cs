@@ -1,6 +1,6 @@
 ﻿namespace CalendarioEsperto.Desings
 {
-    partial class Mes
+    partial class MesUc
     {
         /// <summary> 
         /// Variável de designer necessária.
@@ -28,45 +28,64 @@
         /// </summary>
         private void InitializeComponent()
         {
-            panel1 = new Panel();
-            labelMes = new Label();
-            panel1.SuspendLayout();
+            panelMeses = new Panel();
+            labelMesEscrito = new Label();
+            labelNumeroDoMes = new Label();
+            panelMeses.SuspendLayout();
             SuspendLayout();
             // 
-            // panel1
+            // panelMeses
             // 
-            panel1.Controls.Add(labelMes);
-            panel1.Dock = DockStyle.Fill;
-            panel1.Location = new Point(0, 0);
-            panel1.Margin = new Padding(1);
-            panel1.Name = "panel1";
-            panel1.Size = new Size(80, 80);
-            panel1.TabIndex = 0;
+            panelMeses.BackColor = Color.FromArgb(224, 224, 224);
+            panelMeses.Controls.Add(labelMesEscrito);
+            panelMeses.Controls.Add(labelNumeroDoMes);
+            panelMeses.Dock = DockStyle.Fill;
+            panelMeses.Location = new Point(0, 0);
+            panelMeses.Margin = new Padding(1);
+            panelMeses.Name = "panelMeses";
+            panelMeses.Size = new Size(115, 115);
+            panelMeses.TabIndex = 0;
+            panelMeses.MouseEnter += panelMeses_MouseEnter;
+            panelMeses.MouseLeave += panelMeses_MouseLeave;
             // 
-            // labelMes
+            // labelMesEscrito
             // 
-            labelMes.AutoSize = true;
-            labelMes.Location = new Point(91, 13);
-            labelMes.Name = "labelMes";
-            labelMes.Size = new Size(35, 15);
-            labelMes.TabIndex = 0;
-            labelMes.Text = "Mes: ";
+            labelMesEscrito.AutoSize = true;
+            labelMesEscrito.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            labelMesEscrito.Location = new Point(12, 75);
+            labelMesEscrito.Name = "labelMesEscrito";
+            labelMesEscrito.Size = new Size(43, 20);
+            labelMesEscrito.TabIndex = 1;
+            labelMesEscrito.Text = "Mes:";
+            labelMesEscrito.TextAlign = ContentAlignment.MiddleCenter;
             // 
-            // Mes
+            // labelNumeroDoMes
+            // 
+            labelNumeroDoMes.AutoSize = true;
+            labelNumeroDoMes.Font = new Font("Microsoft Sans Serif", 11.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            labelNumeroDoMes.Location = new Point(70, 9);
+            labelNumeroDoMes.Name = "labelNumeroDoMes";
+            labelNumeroDoMes.Size = new Size(24, 18);
+            labelNumeroDoMes.TabIndex = 0;
+            labelNumeroDoMes.Text = "00";
+            // 
+            // MesUc
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            Controls.Add(panel1);
-            Name = "Mes";
-            Size = new Size(80, 80);
-            panel1.ResumeLayout(false);
-            panel1.PerformLayout();
+            Controls.Add(panelMeses);
+            Name = "MesUc";
+            Size = new Size(115, 115);
+            panelMeses.ResumeLayout(false);
+            panelMeses.PerformLayout();
             ResumeLayout(false);
         }
 
         #endregion
 
-        private Panel panel1;
+        private Panel panelMeses;
         private Label labelMes;
+        private Label labelNumeroDoMes;
+        private Label labelMesEscrito;
     }
 }
